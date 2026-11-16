@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | AERIS</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- BRAND -->
+    <header class="brand">
+        <div class="brand-mark">A</div>
+
+        <div>
+            <div class="brand-name">AERIS</div>
+            <p class="brand-description">
+                AI Drone System for Autonomous<br>
+                Emergency Response and Disaster Surveillance
+            </p>
+        </div>
+    </header>
+
+    <main class="auth-layout">
+
+        <!-- INTRODUCTION -->
+        <section class="intro">
+
+            <h1>
+                Be Part of<br>
+                Something <span>Important.</span>
+            </h1>
+
+            <p>
+                Create your AERIS account to access the emergency response
+                dashboard and support the monitoring and management of
+                emergency incidents.
+            </p>
+
+        </section>
+
+        <!-- SIGN-UP FORM -->
+        <section class="auth-card signup-card">
+
+            <div class="card-heading">
+                <div class="card-icon">♙</div>
+
+                <div>
+                    <h2>Create Your Account</h2>
+                </div>
+            </div>
+
+            <p class="card-description">
+                Join AERIS and help build safer, stronger communities.
+            </p>
+
+            <!-- FLASK MESSAGES -->
+            <div class="flash-list" aria-live="polite">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+            </div>
+
+            <form action="{{ url_for('signup') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+
+                    <div class="input-wrap">
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            maxlength="150"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <div class="input-wrap">
+                        <span class="input-icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            maxlength="254"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="input-wrap">
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password (8+ characters)"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+
+                    <div class="input-wrap">
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            name="confirm_password"
+                            placeholder="Enter your password again"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Create Account <span>→</span>
+                </button>
+
+            </form>
+
+            <div class="divider">OR</div>
+
+            <p class="bottom-note">
+                Already have an account?
+                <a href="{{ url_for('login') }}">Log in</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="auth-footer">
+        <span>
+            AERIS · Emergency Response and Disaster Surveillance
+        </span>
+
+        <span>
+            Technology supporting emergency response
+        </span>
+    </footer>
+
+</div>
+
+<!-- CHECK PASSWORD CONFIRMATION -->
+<script>
+    const signupForm = document.querySelector("form");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm_password");
+
+    signupForm.addEventListener("submit", function (event) {
+        if (password.value !== confirmPassword.value) {
+            event.preventDefault();
+
+            confirmPassword.setCustomValidity(
+                "Your passwords do not match."
+            );
+
+            confirmPassword.reportValidity();
+        } else {
+            confirmPassword.setCustomValidity("");
+        }
+    });
+
+    confirmPassword.addEventListener("input", function () {
+        confirmPassword.setCustomValidity("");
+    });
+</script>
+
+</body>
+</html>
+

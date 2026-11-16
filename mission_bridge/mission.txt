@@ -1,0 +1,9 @@
+{
+    "incident_id": 5,
+    "incident_type": "Fire",
+    "location": "Tembisa",
+    "severity": "high",
+    "x_coordinate": -48.0,
+    "z_coordinate": 18.0,
+    "status": "Pending"
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AERIS | Emergency Operations Centre</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div class="brand-text">
+                <h2>AERIS</h2>
+                <span>EMERGENCY RESPONSE</span>
+            </div>
+        </div>
+
+        <div class="nav-label">WORKSPACE</div>
+
+        <nav class="navigation">
+
+            <a href="{{ url_for('dashboard') }}"
+               class="nav-link active">
+                <span class="nav-icon">⌂</span>
+                <span>Overview</span>
+            </a>
+
+            <a href="{{ url_for('report') }}" class="nav-link">
+                <span class="nav-icon">＋</span>
+                <span>Report Incident</span>
+            </a>
+
+            {% if role == 'Super Admin' %}
+            <a href="{{ url_for('admin_management') }}" class="nav-link">
+                <span class="nav-icon">♙</span>
+                <span>Admin Management</span>
+            </a>
+            <a href="{{ url_for('reports_page') }}" class="nav-link">
+                <span class="nav-icon">▤</span>
+                <span>Reports</span>
+            </a>
+            {% endif %}
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-indicator">
+                <span class="indicator-dot"></span>
+                <div>
+                    <strong>System Status</strong>
+                    <small>Application available</small>
+                </div>
+            </div>
+
+            <a href="{{ url_for('logout') }}"
+               class="nav-link logout-link">
+                <span class="nav-icon">↪</span>
+                <span>Sign Out</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <div class="breadcrumb">
+                    Workspace <span>/</span> Overview
+                </div>
+
+                <p class="topbar-subtitle">
+                    Emergency Operations Centre
+                </p>
+            </div>
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    {{ fullname[0]|upper if fullname else 'U' }}
+                </div>
+
+                <div class="user-details">
+                    <strong>{{ fullname }}</strong>
+                    <span>{{ role|default('Public', true) }}</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- FLASH MESSAGES -->
+        <section class="flash-container" aria-live="polite">
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endwith %}
+
+        </section>
+
+
+        <!-- WELCOME BANNER -->
+        <section class="welcome-section">
+
+            <div class="welcome-text">
+
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    AERIS OPERATIONS
+                </div>
+
+                <h1>
+                    Welcome back,<br>
+                    <span>{{ fullname }}</span>
+                </h1>
+
+                <p>
+                    Your emergency response overview is ready.
+                    Review recorded incidents and manage incoming
+                    emergency reports from one central platform.
+                </p>
+
+                <div class="account-role">
+                    Account Role:
+                    <strong>{{ role|default('Public', true) }}</strong>
+                </div>
+
+                <a href="{{ url_for('report') }}"
+                   class="primary-button">
+                    <span>＋</span>
+                    Report an Incident
+                </a>
+
+            </div>
+
+            <div class="welcome-visual" aria-hidden="true">
+
+                <div class="radar radar-one"></div>
+                <div class="radar radar-two"></div>
+                <div class="radar radar-three"></div>
+
+                <div class="radar-center">✦</div>
+
+                <div class="radar-caption">
+                    AERIS<br>
+                    <strong>SURVEILLANCE</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-overline">
+                        PERFORMANCE SUMMARY
+                    </span>
+
+                    <h2>Incident Overview</h2>
+
+                    <p>
+                        Summary of emergency incidents recorded
+                        in the database.
+                    </p>
+                </div>
+
+                <span class="section-tag">
+                    DATABASE RECORDS
+                </span>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <!-- TOTAL -->
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-label">Total Incidents</span>
+
+                        <div class="stat-icon icon-blue">
+                            ⚠
+                        </div>
+                    </div>
+
+                    <div class="stat-number">{{ total }}</div>
+
+                    <div class="stat-description">
+                        All recorded incidents
+                    </div>
+
+                </article>
+
+
+                <!-- FIRES -->
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-label">Fire Incidents</span>
+
+                        <div class="stat-icon icon-red">
+                            ♨
+                        </div>
+                    </div>
+
+                    <div class="stat-number">{{ fires }}</div>
+
+                    <div class="stat-description">
+                        Recorded fire incidents
+                    </div>
+
+                </article>
+
+
+                <!-- FLOODS -->
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-label">Flood Incidents</span>
+
+                        <div class="stat-icon icon-cyan">
+                            ≋
+                        </div>
+                    </div>
+
+                    <div class="stat-number">{{ floods }}</div>
+
+                    <div class="stat-description">
+                        Recorded flood incidents
+                    </div>
+
+                </article>
+
+
+                <!-- ACCIDENTS -->
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-label">Accident Incidents</span>
+
+                        <div class="stat-icon icon-orange">
+                            ✚
+                        </div>
+                    </div>
+
+                    <div class="stat-number">{{ accidents }}</div>
+
+                    <div class="stat-description">
+                        Recorded accident incidents
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- RECENT INCIDENTS -->
+        <section class="section incidents-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-overline">
+                        EMERGENCY ACTIVITY
+                    </span>
+
+                    <h2>Recent Incidents</h2>
+
+                    <p>
+                        View, review and manage recorded emergency reports.
+                    </p>
+                </div>
+
+                <a href="{{ url_for('report') }}"
+                   class="secondary-button">
+                    ＋ New Incident
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>INCIDENT ID</th>
+                            <th>INCIDENT TYPE</th>
+                            <th>LOCATION</th>
+                            <th>SEVERITY</th>
+                            <th>STATUS</th>
+
+                            {% if role in [
+                                'Super Admin',
+                                'Operations Manager',
+                                'Drone Operator',
+                                'Emergency Response Officer',
+                                'Monitoring Officer'
+                            ] %}
+                                <th>ACTIONS</th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        {% if recent_incidents %}
+
+                            {% for incident in recent_incidents %}
+
+                                <tr>
+
+                                    <td>#{{ incident[0] }}</td>
+
+                                    <td>{{ incident[1] }}</td>
+
+                                    <td>{{ incident[2] }}</td>
+
+                                    <td>
+                                        <span class="severity-badge {{ incident[3]|lower }}">
+                                            {{ incident[3]|upper }}
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge {{ incident[4]|lower|replace(' ', '-') }}">
+                                            {{ incident[4]|default('Active', true)|upper }}
+                                        </span>
+                                    </td>
+
+                                    {% if role in [
+                                        'Super Admin',
+                                        'Operations Manager',
+                                        'Drone Operator',
+                                        'Emergency Response Officer',
+                                        'Monitoring Officer'
+                                    ] %}
+
+                                        <td>
+
+                                            <form
+                                                method="POST"
+                                                action="{{ url_for('update_incident', incident_id=incident[0]) }}"
+                                                class="status-update-form"
+                                            >
+
+                                                <select name="status" required>
+
+                                                    <option value="Active"
+                                                        {% if incident[4] == 'Active' %}selected{% endif %}>
+                                                        Active
+                                                    </option>
+
+                                                    <option value="In Progress"
+                                                        {% if incident[4] == 'In Progress' %}selected{% endif %}>
+                                                        In Progress
+                                                    </option>
+
+                                                    <option value="Resolved"
+                                                        {% if incident[4] == 'Resolved' %}selected{% endif %}>
+                                                        Resolved
+                                                    </option>
+
+                                                    <option value="Closed"
+                                                        {% if incident[4] == 'Closed' %}selected{% endif %}>
+                                                        Closed
+                                                    </option>
+
+                                                </select>
+
+                                                <button type="submit"
+                                                        class="update-btn">
+                                                    Update
+                                                </button>
+
+                                            </form>
+
+                                        </td>
+
+                                    {% endif %}
+
+                                </tr>
+
+                            {% endfor %}
+
+                        {% else %}
+
+                            <tr>
+                                <td colspan="6" class="empty-state">
+
+                                    <div class="empty-icon">⌕</div>
+
+                                    <strong>No incidents recorded yet</strong>
+
+                                    <p>
+                                        New emergency reports will appear
+                                        here once they have been submitted.
+                                    </p>
+
+                                    <a href="{{ url_for('report') }}">
+                                        Record an incident →
+                                    </a>
+
+                                </td>
+                            </tr>
+
+                        {% endif %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <span>
+                AERIS | AI Drone System for Autonomous Emergency
+                Response and Disaster Surveillance
+            </span>
+
+            <span>
+                Emergency Operations Platform
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

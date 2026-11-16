@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | AERIS</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <header class="brand">
+        <div class="brand-mark">A</div>
+
+        <div>
+            <div class="brand-name">AERIS</div>
+            <p class="brand-description">
+                AI Drone System for Autonomous<br>
+                Emergency Response and Disaster Surveillance
+            </p>
+        </div>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="intro">
+
+            <div class="intro-label">
+                <span></span>
+                EMERGENCY RESPONSE SYSTEM
+            </div>
+
+            <h1>
+                Welcome Back<br>
+                to <span>AERIS</span>
+            </h1>
+
+            <p>
+                Log in to access your emergency response command centre.
+                Monitor incidents, review reports and support disaster
+                response operations.
+            </p>
+
+        </section>
+
+        <section class="auth-card">
+
+            <div class="card-heading">
+                <div class="card-icon">♙</div>
+                <div>
+                    <h2>Login</h2>
+                </div>
+            </div>
+
+            <p class="card-description">
+                Enter your account details to continue.
+            </p>
+
+            <div class="flash-list" aria-live="polite">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+            </div>
+
+            <form action="{{ url_for('login') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <div class="input-wrap">
+                        <span class="input-icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="input-wrap">
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-option">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" class="text-link"
+                       onclick="alert('Please contact your system administrator to reset your password.'); return false;">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Log In <span>→</span>
+                </button>
+
+            </form>
+
+            <div class="divider">OR</div>
+
+            <a href="{{ url_for('signup') }}" class="alternate-action">
+                <span>♙</span>
+                Create a new account →
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="auth-footer">
+        <span>
+            AERIS · Emergency Response and Disaster Surveillance
+        </span>
+
+        <span>
+            Supporting faster emergency response
+        </span>
+    </footer>
+
+</div>
+
+</body>
+</html>
+

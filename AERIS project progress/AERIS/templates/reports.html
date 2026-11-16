@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERIS | Management Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <style>
+        .reports-intro { margin: 30px 0; }
+        .reports-intro h1 { margin: 8px 0 10px; }
+        .reports-intro p { max-width: 720px; color: #68778d; line-height: 1.65; }
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+        .report-card {
+            background: #fff;
+            padding: 26px;
+            border-radius: 16px;
+            border: 1px solid #e5eaf1;
+            box-shadow: 0 5px 20px rgba(20, 40, 70, .05);
+        }
+        .report-icon {
+            width: 48px; height: 48px; display: flex;
+            align-items: center; justify-content: center;
+            border-radius: 12px; background: #eaf2ff;
+            color: #2459a6; font-size: 24px; margin-bottom: 20px;
+        }
+        .report-card h3 { margin: 0 0 10px; color: #172b4d; }
+        .report-card p { color: #68778d; line-height: 1.6; min-height: 76px; }
+        .download-report {
+            display: inline-flex; margin-top: 16px; padding: 12px 18px;
+            border-radius: 8px; background: #174a8b; color: #fff;
+            text-decoration: none; font-weight: 600; transition: .2s;
+        }
+        .download-report:hover { background: #0e3568; transform: translateY(-2px); }
+        .back-link { display: inline-block; margin-top: 28px; color: #2459a6; text-decoration: none; font-weight: 600; }
+        .nav-link.active { /* retain dashboard stylesheet active-state styling */ }
+    </style>
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div class="brand-text"><h2>AERIS</h2><span>EMERGENCY RESPONSE</span></div>
+        </div>
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="navigation">
+            <a href="{{ url_for('dashboard') }}" class="nav-link">
+                <span class="nav-icon">⌂</span><span>Overview</span>
+            </a>
+            <a href="{{ url_for('report') }}" class="nav-link">
+                <span class="nav-icon">＋</span><span>Report Incident</span>
+            </a>
+            <a href="{{ url_for('admin_management') }}" class="nav-link">
+                <span class="nav-icon">♙</span><span>Admin Management</span>
+            </a>
+            <a href="{{ url_for('reports_page') }}" class="nav-link active">
+                <span class="nav-icon">▤</span><span>Reports</span>
+            </a>
+        </nav>
+        <div class="sidebar-bottom">
+            <div class="system-indicator">
+                <span class="indicator-dot"></span>
+                <div><strong>System Status</strong><small>Application available</small></div>
+            </div>
+            <a href="{{ url_for('logout') }}" class="nav-link logout-link">
+                <span class="nav-icon">↪</span><span>Sign Out</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <div class="breadcrumb">Workspace <span>/</span> Reports</div>
+                <p class="topbar-subtitle">AERIS Management Reports</p>
+            </div>
+            <div class="user-profile">
+                <div class="user-avatar">{{ fullname[0]|upper if fullname else 'U' }}</div>
+                <div class="user-details"><strong>{{ fullname }}</strong><span>{{ role }}</span></div>
+            </div>
+        </header>
+
+        <section class="flash-container" aria-live="polite">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endwith %}
+        </section>
+
+        <section class="section reports-intro">
+            <span class="section-overline">ADMINISTRATION</span>
+            <h1>Management Reports</h1>
+            <p>Access and download official AERIS system reports. Select a report below to generate its PDF document.</p>
+        </section>
+
+        <section class="report-grid">
+            <article class="report-card">
+                <div class="report-icon">↪</div>
+                <h3>Login Activity Report</h3>
+                <p>Review user names, email addresses, account roles and recorded login dates and times.</p>
+                <a href="{{ url_for('download_login_report') }}" class="download-report">Download PDF ↓</a>
+            </article>
+            <article class="report-card">
+                <div class="report-icon">⚠</div>
+                <h3>Incident Management Report</h3>
+                <p>Review incident IDs, reporters, incident types, locations, severity levels, statuses and dates.</p>
+                <a href="{{ url_for('download_incident_report') }}" class="download-report">Download PDF ↓</a>
+            </article>
+            <article class="report-card">
+                <div class="report-icon">⌁</div>
+                <h3>System Activity Report</h3>
+                <p>Review recorded user actions, descriptions, account roles and activity timestamps.</p>
+                <a href="{{ url_for('download_activity_report') }}" class="download-report">Download PDF ↓</a>
+            </article>
+        </section>
+
+        <a href="{{ url_for('dashboard') }}" class="back-link">← Back to Dashboard</a>
+
+        <footer class="footer">
+            <span>AERIS | AI Drone System for Autonomous Emergency Response and Disaster Surveillance</span>
+            <span>Management Reports</span>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

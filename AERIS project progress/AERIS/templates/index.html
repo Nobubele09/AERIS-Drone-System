@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AERIS | Autonomous Emergency Response System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="home-page">
+
+<div class="hero">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            <span class="logo-icon">A</span>
+            <span>
+                <strong>AERIS</strong>
+                <small>EMERGENCY RESPONSE SYSTEM</small>
+            </span>
+        </a>
+
+        <div class="menu">
+            <a href="/" class="active">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('signup') }}" class="signup-btn">
+                Create Account
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- Main hero content -->
+    <main class="hero-content">
+
+        <h1>
+            A Faster View.<br>
+            <span>A Safer Response.</span>
+        </h1>
+
+        <p class="hero-description">
+            AERIS is an AI Drone System for Autonomous Emergency Response
+            and Disaster Surveillance. It is designed to support the
+            monitoring of fires, floods and road accidents, helping
+            emergency teams assess situations and respond more effectively.
+        </p>
+
+        <div class="buttons">
+
+            <a href="{{ url_for('signup') }}" class="primary-button">
+                Get Started <span>→</span>
+            </a>
+
+            <a href="{{ url_for('login') }}" class="secondary-button">
+                Sign In
+            </a>
+
+        </div>
+
+
+    </main>
+
+    <!-- Bottom information -->
+    <footer class="home-footer">
+        <span> AERIS · AI Emergency Response & Disaster Surveillance </span>
+        <span>Technology in support of safer communities</span>
+    </footer>
+
+</div>
+
+</body>
+</html>
+

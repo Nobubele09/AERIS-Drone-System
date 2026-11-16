@@ -1,0 +1,7195 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/tesla/TeslaModel3Simple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/dji/mavic/protos/Mavic2Pro.proto"
+
+WorldInfo {
+  info [
+    "AERIS - AI Drone System for Autonomous Emergency Response and Disaster Surveillance."
+    "Large South African township-inspired residential environment with houses, local shops, streets and vehicles."
+    "Emergency incident markers identify fire, flood and accident locations for simulated drone surveillance."
+  ]
+  title "AERIS - Kasi Emergency Response Environment"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+}
+Viewpoint {
+  orientation -0.08298510170904626 0.000726104463615356 0.9965505233888781 2.932699021808869
+  position 12.273835142598891 -4.276759434009707 3.7866195964268594
+  near 0.2
+  follow "Mavic 2 PRO"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 600 600
+  tileSize 8 8
+  appearance SandyGround {
+  }
+}
+Solid {
+  translation 0 -90 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 240 9 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 0.045
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.92 0.88 0.65
+            roughness 1
+          }
+          geometry Box {
+            size 240 0.16 0.075
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_H_10"
+}
+Solid {
+  translation 0 -30 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 240 9 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 0.045
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.92 0.88 0.65
+            roughness 1
+          }
+          geometry Box {
+            size 240 0.16 0.075
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_H_70"
+}
+Solid {
+  translation 0 30 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 240 9 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 0.045
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.92 0.88 0.65
+            roughness 1
+          }
+          geometry Box {
+            size 240 0.16 0.075
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_H_130"
+}
+Solid {
+  translation 0 90 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 240 9 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 0.045
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.92 0.88 0.65
+            roughness 1
+          }
+          geometry Box {
+            size 240 0.16 0.075
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_H_190"
+}
+Solid {
+  translation -90 0 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 9 240 0.07
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_V_10"
+}
+Solid {
+  translation -30 0 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 9 240 0.07
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_V_70"
+}
+Solid {
+  translation 30 0 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 9 240 0.07
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_V_130"
+}
+Solid {
+  translation 90 0 0.035
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.13
+            roughness 1
+          }
+          geometry Box {
+            size 9 240 0.07
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Road_V_190"
+}
+Solid {
+  translation -60 -60 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_40_40"
+}
+Solid {
+  translation 0 -60 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_100_40"
+}
+Solid {
+  translation 60 -60 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_160_40"
+}
+Solid {
+  translation -60 0 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_40_100"
+}
+Solid {
+  translation 0 0 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_100_100"
+}
+Solid {
+  translation 60 0 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_160_100"
+}
+Solid {
+  translation -60 60 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_40_160"
+}
+Solid {
+  translation 0 60 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_100_160"
+}
+Solid {
+  translation 60 60 0.02
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.48 0.43 0.34
+            roughness 1
+          }
+          geometry Box {
+            size 5 5 0.04
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Open_Yard_160_160"
+}
+Solid {
+  translation -77 -74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_01"
+}
+Solid {
+  translation -60 -74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_02"
+}
+Solid {
+  translation -77 -46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_03"
+}
+Solid {
+  translation -60 -46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_04"
+}
+Solid {
+  translation -17 -74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_05"
+}
+Solid {
+  translation 0 -74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_06"
+}
+Solid {
+  translation -17 -46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_07"
+}
+Solid {
+  translation 0 -46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_08"
+}
+Solid {
+  translation 43 -74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_09"
+}
+Solid {
+  translation 60 -74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_10"
+}
+Solid {
+  translation 43 -46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_11"
+}
+Solid {
+  translation 60 -46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_12"
+}
+Solid {
+  translation -77 -14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_13"
+}
+Solid {
+  translation -60 -14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_14"
+}
+Solid {
+  translation -77 14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_15"
+}
+Solid {
+  translation -60 14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_16"
+}
+Solid {
+  translation -17 -14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_17"
+}
+Solid {
+  translation 0 -14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_18"
+}
+Solid {
+  translation -17 14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_19"
+}
+Solid {
+  translation 0 14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_20"
+}
+Solid {
+  translation 43 -14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_21"
+}
+Solid {
+  translation 60 -14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_22"
+}
+Solid {
+  translation 43 14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_23"
+}
+Solid {
+  translation 60 14 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_24"
+}
+Solid {
+  translation -77 46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_25"
+}
+Solid {
+  translation -60 46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_26"
+}
+Solid {
+  translation -77 74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_27"
+}
+Solid {
+  translation -60 74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_28"
+}
+Solid {
+  translation -17 46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_29"
+}
+Solid {
+  translation 0 46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_30"
+}
+Solid {
+  translation -17 74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_31"
+}
+Solid {
+  translation 0 74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_32"
+}
+Solid {
+  translation 43 46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_33"
+}
+Solid {
+  translation 60 46 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_34"
+}
+Solid {
+  translation 43 74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_35"
+}
+Solid {
+  translation 60 74 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 1.8 0.12 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.2 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.12 0.12
+            roughness 1
+          }
+          geometry Box {
+            size 0.1 0.12 1.35
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_House_36"
+}
+Solid {
+  translation -105 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_01_-112"
+}
+Solid {
+  translation -82 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_02_-112"
+}
+Solid {
+  translation -59 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_03_-112"
+}
+Solid {
+  translation -36 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_04_-112"
+}
+Solid {
+  translation -13 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_05_-112"
+}
+Solid {
+  translation 10 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_06_-112"
+}
+Solid {
+  translation 33 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_07_-112"
+}
+Solid {
+  translation 56 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_08_-112"
+}
+Solid {
+  translation 79 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_09_-112"
+}
+Solid {
+  translation 102 -112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_10_-112"
+}
+Solid {
+  translation -105 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_01_112"
+}
+Solid {
+  translation -82 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_02_112"
+}
+Solid {
+  translation -59 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.68 0.52
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_03_112"
+}
+Solid {
+  translation -36 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.72 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_04_112"
+}
+Solid {
+  translation -13 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.76 0.58 0.48
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_05_112"
+}
+Solid {
+  translation 10 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.72 0.62
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_06_112"
+}
+Solid {
+  translation 33 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.82 0.78 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.18 0.19 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_07_112"
+}
+Solid {
+  translation 56 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.66 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.28 0.24 0.2
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_08_112"
+}
+Solid {
+  translation 79 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.72 0.58
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.25 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_09_112"
+}
+Solid {
+  translation 102 112 0
+  children [
+    Pose {
+      translation 0 0 1.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.72 0.62 0.66
+            roughness 1
+          }
+          geometry Box {
+            size 10 8 3.8
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.35 0.3 0.24
+            roughness 1
+          }
+          geometry Box {
+            size 10.5 8.5 0.35
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.08 1.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.16 0.1
+            roughness 1
+          }
+          geometry Box {
+            size 1.5 0.18 2.6
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3 -4.1 2.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.55 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 1.7 0.16 1.25
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Outer_House_10_112"
+}
+Solid {
+  translation -8 42 0
+  children [
+    Pose {
+      translation 0 0 2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.68 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 12 9 4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.16 0.16 0.17
+            roughness 1
+          }
+          geometry Box {
+            size 12.5 9.5 0.4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.58 1.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.15 0.12 0.08
+            roughness 1
+          }
+          geometry Box {
+            size 2.5 0.18 2.5
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.65 3.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.82 0.18
+            roughness 1
+          }
+          geometry Box {
+            size 3 0.15 0.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.4 -4.78 3.35
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.08 0.08
+            roughness 1
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Shop_1"
+}
+Solid {
+  translation 8 42 0
+  children [
+    Pose {
+      translation 0 0 2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.58 0.38
+            roughness 1
+          }
+          geometry Box {
+            size 12 9 4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.16 0.16 0.17
+            roughness 1
+          }
+          geometry Box {
+            size 12.5 9.5 0.4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.58 1.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.15 0.12 0.08
+            roughness 1
+          }
+          geometry Box {
+            size 2.5 0.18 2.5
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.65 3.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.82 0.18
+            roughness 1
+          }
+          geometry Box {
+            size 3 0.15 0.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.4 -4.78 3.35
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.08 0.08
+            roughness 1
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Shop_2"
+}
+Solid {
+  translation -8 -42 0
+  children [
+    Pose {
+      translation 0 0 2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.36 0.28
+            roughness 1
+          }
+          geometry Box {
+            size 12 9 4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.16 0.16 0.17
+            roughness 1
+          }
+          geometry Box {
+            size 12.5 9.5 0.4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.58 1.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.15 0.12 0.08
+            roughness 1
+          }
+          geometry Box {
+            size 2.5 0.18 2.5
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.65 3.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.82 0.18
+            roughness 1
+          }
+          geometry Box {
+            size 3 0.15 0.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.4 -4.78 3.35
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.08 0.08
+            roughness 1
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Shop_3"
+}
+Solid {
+  translation 8 -42 0
+  children [
+    Pose {
+      translation 0 0 2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.32 0.48 0.72
+            roughness 1
+          }
+          geometry Box {
+            size 12 9 4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 4.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.16 0.16 0.17
+            roughness 1
+          }
+          geometry Box {
+            size 12.5 9.5 0.4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.58 1.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.15 0.12 0.08
+            roughness 1
+          }
+          geometry Box {
+            size 2.5 0.18 2.5
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -4.65 3.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.82 0.18
+            roughness 1
+          }
+          geometry Box {
+            size 3 0.15 0.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.4 -4.78 3.35
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.08 0.08
+            roughness 1
+          }
+        }
+      ]
+    }
+  ]
+  name "Kasi_Shop_4"
+}
+TeslaModel3Simple {
+  translation -100 -35 0.31
+  name "Kasi_Parked_Car_01"
+}
+TeslaModel3Simple {
+  translation -70 -35 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_02"
+}
+TeslaModel3Simple {
+  translation -40 -35 0.31
+  name "Kasi_Parked_Car_03"
+}
+TeslaModel3Simple {
+  translation -10 -35 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_04"
+}
+TeslaModel3Simple {
+  translation 40 -35 0.31
+  name "Kasi_Parked_Car_05"
+}
+TeslaModel3Simple {
+  translation 70 -35 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_06"
+}
+TeslaModel3Simple {
+  translation 100 -35 0.31
+  name "Kasi_Parked_Car_07"
+}
+TeslaModel3Simple {
+  translation -100 25 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_08"
+}
+TeslaModel3Simple {
+  translation -70 25 0.31
+  name "Kasi_Parked_Car_09"
+}
+TeslaModel3Simple {
+  translation -40 25 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_10"
+}
+TeslaModel3Simple {
+  translation 40 25 0.31
+  name "Kasi_Parked_Car_11"
+}
+TeslaModel3Simple {
+  translation 70 25 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_12"
+}
+TeslaModel3Simple {
+  translation 100 25 0.31
+  name "Kasi_Parked_Car_13"
+}
+TeslaModel3Simple {
+  translation -35 -100 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_14"
+}
+TeslaModel3Simple {
+  translation 35 -100 0.31
+  name "Kasi_Parked_Car_15"
+}
+TeslaModel3Simple {
+  translation -35 100 0.31
+  name "Kasi_Parked_Car_16"
+}
+TeslaModel3Simple {
+  translation 35 100 0.31
+  rotation 0 0 1 3.141592653589793
+  name "Kasi_Parked_Car_17"
+}
+Pine {
+  translation -115 -75 0
+  name "Kasi_Street_Tree_01"
+}
+Pine {
+  translation -115 -15 0
+  name "Kasi_Street_Tree_02"
+}
+Pine {
+  translation -115 45 0
+  name "Kasi_Street_Tree_03"
+}
+Pine {
+  translation -115 105 0
+  name "Kasi_Street_Tree_04"
+}
+Pine {
+  translation 115 -75 0
+  name "Kasi_Street_Tree_05"
+}
+Pine {
+  translation 115 -15 0
+  name "Kasi_Street_Tree_06"
+}
+Pine {
+  translation 115 45 0
+  name "Kasi_Street_Tree_07"
+}
+Pine {
+  translation 115 105 0
+  name "Kasi_Street_Tree_08"
+}
+Pine {
+  translation -75 -115 0
+  name "Kasi_Street_Tree_09"
+}
+Pine {
+  translation -15 -115 0
+  name "Kasi_Street_Tree_10"
+}
+Pine {
+  translation 45 -115 0
+  name "Kasi_Street_Tree_11"
+}
+Pine {
+  translation 105 -115 0
+  name "Kasi_Street_Tree_12"
+}
+Pine {
+  translation -75 115 0
+  name "Kasi_Street_Tree_13"
+}
+Pine {
+  translation -15 115 0
+  name "Kasi_Street_Tree_14"
+}
+Pine {
+  translation 45 115 0
+  name "Kasi_Street_Tree_15"
+}
+Pine {
+  translation 105 115 0
+  name "Kasi_Street_Tree_16"
+}
+Solid {
+  translation -48 18 0.16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+      }
+      geometry Cylinder {
+        height 0.3
+        radius 2.5
+      }
+    }
+  ]
+  name "FireZone"
+}
+Solid {
+  translation 48 18 0.16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.3 1
+        roughness 1
+      }
+      geometry Cylinder {
+        height 0.3
+        radius 2.5
+      }
+    }
+  ]
+  name "FloodZone"
+}
+Solid {
+  translation 0 -78 0.16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.4 0
+        roughness 1
+      }
+      geometry Cylinder {
+        height 0.3
+        radius 2.5
+      }
+    }
+  ]
+  name "AccidentZone"
+}
+Mavic2Pro {
+  hidden position_0_0 -1.6999999985867733
+  hidden linearVelocity_0 0.11790572037669675 -0.16310375702491742 2.565805187640977e-07
+  hidden angularVelocity_0 -3.400298750346662e-07 2.7812107081031176e-07 0.00131409027376023
+  hidden rotation_5 0 0 -1 1.699999998586773
+  hidden position_5_0 1.767252966869646e-09
+  hidden linearVelocity_5 0.11800914230771263 -0.1629777180198333 2.5666640141179444e-07
+  hidden angularVelocity_5 -3.399149943406038e-07 2.7796283071053134e-07 0.0013141039871679256
+  hidden position_6_0 6.3307017191904116e-15
+  hidden linearVelocity_6 0.11801242976250503 -0.16297091173264194 2.5615423641199067e-07
+  hidden angularVelocity_6 -3.1784539565097127e-07 2.560887595073739e-07 0.0013141035498867445
+  hidden linearVelocity_7 0.11802076641979703 -0.1629641059991934 2.568444328883068e-07
+  hidden angularVelocity_7 -3.1784539462781947e-07 2.5608876055931085e-07 0.0013141035498814217
+  translation 0.7315730900145581 0.20225424368156003 0.9994151524227105
+  rotation 0.012880245427903251 0.01815967881834791 -0.9997521319521812 0.6519004069043599
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}

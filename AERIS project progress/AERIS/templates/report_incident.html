@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident | AERIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1730;
+            color: white;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 40px auto;
+            background: #142544;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 { margin-top: 0; }
+
+        label {
+            display: block;
+            margin: 18px 0 8px;
+        }
+
+        input, select {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 13px;
+            border-radius: 6px;
+            border: 1px solid #526581;
+            font-size: 16px;
+        }
+
+        .location {
+            background: #e9eef5;
+            color: #142544;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 24px;
+            border: none;
+            border-radius: 6px;
+            background: #e5ae38;
+            color: #142544;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Report an Emergency</h2>
+    <p>Submit an incident report to the AERIS emergency response system.</p>
+
+    <form method="POST" action="{{ url_for('report') }}">
+        <label>Incident Location</label>
+        <input class="location" type="text" value="Tembisa" readonly>
+
+        <label for="incident_type">Incident Type</label>
+        <select name="incident_type" id="incident_type" required>
+            <option value="">Select incident type</option>
+            <option value="Fire">Fire</option>
+            <option value="Flood">Flood</option>
+            <option value="Accident">Accident</option>
+            <option value="Other Emergency">Other Emergency</option>
+        </select>
+
+        <label for="severity">Severity</label>
+        <select name="severity" id="severity" required>
+            <option value="">Select severity</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="critical">Critical</option>
+        </select>
+
+        <button type="submit">Submit Incident Report</button>
+    </form>
+</div>
+</body>
+</html>
